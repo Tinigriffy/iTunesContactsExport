@@ -1,4 +1,4 @@
-# A sade IPHone story ...
+# A sad IPHone story ...
 I wrote this python script after my iPhone had a unrepairable hardware failure and a corrupt iTunes backup that could not be restored on my new iPhone!
 I was losing pictures but not that much as I regularly extracts them, but it was a totally different story for the contacts, as iTunes offers no way to extract them and I refuse to send my data to iCloud.
 I search for a way to recover my contacts and I found not only many applications that all promise that they will repair and/ore recover you data, but also simple script that extract them from the database of the address book. You just need a backup from iTunes. 
@@ -6,13 +6,24 @@ So I decided to write my own version that extracts all the fields I need in a vC
 I took this opportunity to write it in python, language that I barely know, so i ask for mercy to the experts in Python because I probably do not follow theirs best practice :)
 
 # Install
- ```
-    pip install iTunesContactsExport
- ```
+## prerequisits
+  -python >=3.9 [prerequisits]([https://www.python.org/downloads/])
+  -pip
+  -pipx (optional)
+## Intall 
+```
+    pip install itunescontactsexport
+```
+or
+```
+    pip install pipx
+    pipx install itunescontactsexport
+```
+ 
 # Usage
  There 2 modes to use this script:
  - iTunes mode: You need to have access to the directory of a iTunes backup of your phone. The script will figure out where are the databases of the address book and export the contacts
- - db: You need to provide the path to the address book you want to export and optionaly the path to the iamges database of the address book
+ - db: You need to provide the path to the address book you want to export and optionally the path to the iamges database of the address book
 ## Backup from iTunes
  ```usage: export.py itunes [-h] [-bday] [-q {best,lowest,orig}] [-o outputFile] backupDir
 
@@ -48,7 +59,7 @@ The attributs exported to the vcard are:
 - Nickname
 - job title
 - Phones numbers
-- Adresses
+- Addresses
 - emails
 - Birthday
 - relatives
