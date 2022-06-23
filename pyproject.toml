@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "iTunesContactsExport"
+version = "0.1.0"
+authors = ["Benoit Istin <beistin@gmail.com>"]
+description = "This small program will export your contact from an itunes backup."
+readme = "README.md"
+keywords = ["itunes", "iPhone", "ipad", "vcard", "export"]
+license = "Apache-2.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent"
+]
+packages = [
+    {include ="iTunesContactsExport"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+vobject = "^0.9.6"
+
+[tool.poetry.scripts]
+export = "iTunesContactsExport.export.py:main"
+
+[build-system]
+requires = ["setuptools>=42","wheel"]
+build-backend = "setuptools.build_meta"
+
+
