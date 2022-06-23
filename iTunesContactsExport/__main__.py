@@ -1,9 +1,11 @@
 import argparse
 from os import path
 import sys
-from iTunesDatabase import iPhoneAddressBookDAO,iPhoneAddressBookImagesDAO,iPhoneManifestDAO
-from iTunesDatabase.iPhoneAddressBookImagesDAO import iPhoneAddressBookImagesDAO
-from vCard import vCardBuilder
+
+from iTunesContactsExport.iTunesDatabase.iPhoneAddressBookDAO import iPhoneAddressBookDAO
+from iTunesContactsExport.iTunesDatabase.iPhoneAddressBookImagesDAO import iPhoneAddressBookImagesDAO
+from iTunesContactsExport.iTunesDatabase.iPhoneManifestDAO import iPhoneManifestDAO
+from iTunesContactsExport.vCard.vCardBuilder import vCardBuilder
 
 def exportContacts(f,db:iPhoneAddressBookDAO,dbImages:iPhoneAddressBookImagesDAO,bday:bool,quality:iPhoneAddressBookImagesDAO.ImageQuality):
     person=db.nextPerson()
