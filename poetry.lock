@@ -31,7 +31,7 @@ python-dateutil = ">=2.4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "2a063d2abd6254fee8cdcb6c72f75fc0b330b8e0bc9d9ad21bb1aea2e018fdd2"
+content-hash = "20b312f1640d6926f3186fede081590809cfe1d8c54ef50c992fcf8d2c20476a"
 
 [metadata.files]
 python-dateutil = [
