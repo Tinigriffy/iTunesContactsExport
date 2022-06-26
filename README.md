@@ -7,9 +7,9 @@ I took this opportunity to write it in python, language that I barely know, so i
 
 # Install
 ## prerequisits
-  -python >=3.9 [prerequisits]([https://www.python.org/downloads/])
-  -pip
-  -pipx (optional)
+- python >=3.9 [prerequisits]([https://www.python.org/downloads/])
+- pip
+- pipx (optional)
 ## Intall 
 ```
     pip install itunescontactsexport
@@ -24,8 +24,13 @@ or
  There 2 modes to use this script:
  - iTunes mode: You need to have access to the directory of a iTunes backup of your phone. The script will figure out where are the databases of the address book and export the contacts
  - db: You need to provide the path to the address book you want to export and optionally the path to the iamges database of the address book
+
+The image quality refer to the available thumbnail in our thumbnail database:
+- originale: it use the originale image with no transformation
+- best: use the thumbnail with the highest resolution
+- lowest: use the thumbnail with the lowest resolution.
 ## Backup from iTunes
- ```usage: export.py itunes [-h] [-bday] [-q {best,lowest,orig}] [-o outputFile] backupDir
+ ```usage: iTunesContactsExport itunes [-h] [-bday] [-q {best,lowest,orig}] [-o outputFile] backupDir
 
 positional arguments:
   backupDir             Path to the directory of the Itunebackup
@@ -38,7 +43,7 @@ optional arguments:
   -o outputFile         Path to export file
 ```
 ## Backup from db
- ```usage: export.py db [-h] [-bday] [-q {best,lowest,orig}] [-i imagesDBPath] [-o outputFile] addressBookDBPath
+ ```usage: iTunesContactsExport db [-h] [-bday] [-q {best,lowest,orig}] [-i imagesDBPath] [-o outputFile] addressBookDBPath
 
 positional arguments:
   addressBookDBPath     Path to the addressbook database
