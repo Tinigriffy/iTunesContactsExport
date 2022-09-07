@@ -84,7 +84,7 @@ def main():
     
     f=sys.stdout
     if args.subcommand == "itunes":
-        manifestPath=path.join(args.backupdir,'Manifest.db')
+        manifestPath=path.join(args.backupDir,'Manifest.db')
         (dbfile,dbImagesfile)=findDatabases(manifestPath);
     elif args.subcommand == "db":
         dbfile=args.addressBookDBPath
